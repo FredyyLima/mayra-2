@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "ci": "^2.2.0",
     "composer": "^4.1.0",
     "node": "^20.2.0"
   }
