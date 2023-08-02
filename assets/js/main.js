@@ -258,4 +258,158 @@
    */
   new PureCounter();
 
+
+  /* Scripts dos modais */
+  const fade = document.querySelector("#fade");
+
+  /*Modal Obrigado*/
+
+  const OpenObrigado = document.querySelector("#btn_form_cursos");
+  const CloseObrigado = document.querySelector("#close-modal-obrigado");
+  const modalObrigado = document.querySelector("#modal-obrigado");
+
+  const toggleModalObrigado = () => {
+    modalObrigado.classList.toggle("hide");
+    fade.classList.toggle("hide");
+  };
+  const recarregar = () =>{
+    window.location.reload(true);
+  }
+
+  [CloseObrigado].forEach((el) => {
+    el.addEventListener("click", () => recarregar());
+  });
+
+  // [OpenObrigado].forEach((el) => {
+  //   el.addEventListener("click", () => toggleModalObrigado());
+  // });
+
+  /*Modal Oratoria*/
+  const openModalButton = document.querySelector("#open-modal-oratoria");
+  const closeModalButton = document.querySelector("#close-modal-oratoria");
+  const modal = document.querySelector("#modal-oratoria");
+  const formOratoria = document.querySelector("#formOratoria");
+
+  formOratoria.addEventListener("submit", (event) => {
+    event.preventDefault();
+    modal.classList.add("hide");
+    fade.classList.add("hide")
+    toggleModalObrigado();
+  });
+
+  const toggleModalOratoria = () => {    
+    modal.classList.toggle("hide");
+    fade.classList.toggle("hide");
+  };
+
+  closeModalButton.addEventListener("click", toggleModalOratoria)
+  openModalButton.addEventListener("click", toggleModalOratoria)
+  // [openModalButton, closeModalButton].forEach((el) => {
+  //   el.addEventListener("click", () => toggleModalOratoria());
+  // });
+
+  /*Modal Media Training*/
+  const OpenMediaTraining = document.querySelector("#open-modal-MediaTraining");
+  const CloseMediaTraining = document.querySelector("#close-modal-MediaTraining");
+  const ModalMediaTraining = document.querySelector("#modal-MediaTraining");
+  const formMediaTraining = document.querySelector("#formMT");
+
+  formMediaTraining.addEventListener("submit", (event) => {
+    event.preventDefault();
+    ModalMediaTraining.classList.add("hide");
+    fade.classList.add("hide")
+    toggleModalObrigado();
+  });
+
+  const toggleModalMediaTraining = () => {
+    ModalMediaTraining.classList.toggle("hide");
+    fade.classList.toggle("hide");
+  };
+
+  CloseMediaTraining.addEventListener("click", toggleModalMediaTraining)
+  OpenMediaTraining.addEventListener("click", toggleModalMediaTraining)
+  
+  // [OpenMediaTraining, CloseMediaTraining, ModalMediaTraining].forEach((el) => {
+  //   el.addEventListener("click", () => toggleModalMediaTraining());
+  // });
+
+  /*Modal Oratória para apresentações acadêmicas*/
+  const Openoratoria2 = document.querySelector("#open-modal-oratoria2");
+  const Closeoratoria2 = document.querySelector("#close-modal-oratoria2");
+  const Modaloratoria2 = document.querySelector("#modal-oratoria2");
+  const formOratoria2 = document.querySelector("#formOratoria2");
+
+  formOratoria2.addEventListener("submit", (event) => {
+    event.preventDefault();
+    Modaloratoria2.classList.add("hide");
+    fade.classList.add("hide")
+    toggleModalObrigado();
+  });
+
+  const toggleModaloratoria2 = () => {
+    Modaloratoria2.classList.toggle("hide");
+    fade.classList.toggle("hide");
+  };
+
+
+  Closeoratoria2.addEventListener("click", toggleModaloratoria2)
+  Openoratoria2.addEventListener("click", toggleModaloratoria2)
+  // [Openoratoria2, Closeoratoria2, Modaloratoria2].forEach((el) => {
+  //   el.addEventListener("click", () => toggleModaloratoria2());
+  // });
+
+  /*Modal Ferramentas para enfrentar situações desafiadoras*/
+  const Opendesafiadoras = document.querySelector("#open-modal-desafiadoras");
+  const Closedesafiadoras = document.querySelector("#close-modal-desafiadoras");
+  const Modaldesafiadoras = document.querySelector("#modal-desafiadoras");
+  const formDesafiadoras = document.querySelector("#formDesafiadoras");
+
+  formDesafiadoras.addEventListener("submit", (event) => {
+    event.preventDefault();
+    Modaldesafiadoras.classList.add("hide");
+    fade.classList.add("hide")
+    toggleModalObrigado();
+  });
+
+  const toggleModaldesafiadoras = () => {
+    Modaldesafiadoras.classList.toggle("hide");
+    fade.classList.toggle("hide");
+  };
+
+  Closedesafiadoras.addEventListener("click", toggleModaldesafiadoras)
+  Opendesafiadoras.addEventListener("click", toggleModaldesafiadoras)
+  // [Opendesafiadoras, Closedesafiadoras, Modaldesafiadoras].forEach((el) => {
+  //   el.addEventListener("click", () => toggleModaldesafiadoras());
+  // });
+
+  /*Modal Comunicação Não-Violenta*/
+  const Opencomunicacao = document.querySelector("#open-modal-comunicacao");
+  const Closecomunicacao = document.querySelector("#close-modal-comunicacao");
+  const Modalcomunicacao = document.querySelector("#modal-comunicacao");
+  const formComunicacao = document.querySelector("#formComunicacao");
+
+  formComunicacao.addEventListener("submit", (event) => {
+    event.preventDefault();
+    Modalcomunicacao.classList.add("hide");
+    fade.classList.add("hide")
+    toggleModalObrigado();
+  });
+
+  const toggleModalcomunicacao = () => {
+    Modalcomunicacao.classList.toggle("hide");
+    fade.classList.toggle("hide");
+  };
+
+  Closecomunicacao.addEventListener("click", toggleModalcomunicacao)
+  Opencomunicacao.addEventListener("click", toggleModalcomunicacao)
+  // [Opencomunicacao, Closecomunicacao, Modalcomunicacao].forEach((el) => {
+  //   el.addEventListener("click", () => toggleModalcomunicacao());
+  // });
+
+  const formContato = document.querySelector("#formContato");
+
+  formContato.addEventListener("submit", (event) => {
+    event.preventDefault();
+    toggleModalObrigado();
+  });
 })()

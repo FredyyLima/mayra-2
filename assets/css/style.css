@@ -828,7 +828,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# contact
 --------------------------------------------------------------*/
 .contact {
   padding-bottom: 130px;
@@ -916,55 +916,7 @@ section {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
 
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
 
 .contact .php-email-form .form-group {
   margin-bottom: 15px;
@@ -1101,4 +1053,526 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+
+@-webkit-keyframes load {
+  to {transform: rotate(360deg)}
+}
+
+@keyframes load {
+  to {transform: rotate(360deg)}
+}
+
+.pre {
+  /* width:80px;
+  height: 80px;
+  background-image: url("https://ilustracode.com.br/assets/images/load.png");
+  background-position: center;
+  background-size: contain;
+  animation: load 2s infinite linear; */
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/load.png");
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Z-index alto para garantir que fique acima do conteúdo */
+  animation: load 2s infinite linear;
+}
+
+.box-load{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/*CSS dos modais */
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+}
+
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+#fade {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+form{
+  line-height: 2.5rem;
+}
+
+#btn_form_cursos:hover {
+  background: #37b3ed;
+}
+#btn_form_cursos {
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+}
+
+/*Modal Obrigado*/
+#open-modal-obrigado {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-obrigado {
+  background-color: #007bff;
+}
+
+#open-modal-obrigado:hover {
+  opacity: 1;
+}
+#modal-obrigado {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-obrigado {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-obrigado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-obrigado.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal-obrigado.hide {
+  top: 0;
+}
+
+#close-modal-obrigado {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-obrigado:hover{
+  background-color: #bd2828;
+}
+
+/*Modal oratoria*/
+#open-modal-oratoria {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-oratoria {
+  background-color: #007bff;
+}
+
+#open-modal-oratoria:hover {
+  opacity: 1;
+}
+#modal-oratoria {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-oratoria {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-oratoria {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-oratoria.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#modal-oratoria.hide {
+  top: 0;
+}
+
+#close-modal-oratoria {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-oratoria:hover{
+  background-color: #bd2828;
+}
+
+/*Modal Media Traning*/
+#open-modal-MediaTraining {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-MediaTraining {
+  background-color: #007bff;
+}
+
+#open-modal-MediaTraining:hover {
+  opacity: 1;
+}
+#modal-MediaTraining {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-MediaTraining {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-MediaTraining {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-MediaTraining.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#modal-MediaTraining.hide {
+  top: 0;
+}
+
+#close-modal-MediaTraining {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-MediaTraining:hover{
+  background-color: #bd2828;
+}
+
+/*Modal oratoria2*/
+#open-modal-oratoria2 {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-oratoria2 {
+  background-color: #007bff;
+}
+
+#open-modal-oratoria2:hover {
+  opacity: 1;
+}
+#modal-oratoria2 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-oratoria2 {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-oratoria2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-oratoria2.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#modal-oratoria2.hide {
+  top: 0;
+}
+
+#close-modal-oratoria2 {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-oratoria2:hover{
+  background-color: #bd2828;
+}
+
+/*Modal desafiadoras*/
+#open-modal-desafiadoras {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-desafiadoras {
+  background-color: #007bff;
+}
+
+#open-modal-desafiadoras:hover {
+  opacity: 1;
+}
+#modal-desafiadoras {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-desafiadoras {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-desafiadoras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-desafiadoras.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#modal-desafiadoras.hide {
+  top: 0;
+}
+
+#close-modal-desafiadoras {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-desafiadoras:hover{
+  background-color: #bd2828;
+}
+
+/*Modal comunicacao*/
+#open-modal-comunicacao {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-comunicacao {
+  background-color: #007bff;
+}
+
+#open-modal-comunicacao:hover {
+  opacity: 1;
+}
+#modal-comunicacao {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-comunicacao {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-comunicacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-comunicacao.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#modal-comunicacao.hide {
+  top: 0;
+}
+
+#close-modal-comunicacao {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-comunicacao:hover{
+  background-color: #bd2828;
 }
