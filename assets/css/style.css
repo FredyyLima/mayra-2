@@ -161,6 +161,11 @@ h6 {
   white-space: nowrap;
 }
 
+.threads{
+  width: 18px !important;
+  margin-bottom: 3px !important;
+}
+
 .nav-menu a,
 .nav-menu a:focus {
   display: flex;
