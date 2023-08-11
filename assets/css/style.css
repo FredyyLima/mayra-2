@@ -1583,3 +1583,76 @@ form{
 #close-modal-comunicacao:hover{
   background-color: #bd2828;
 }
+
+/*Modal escola*/
+#open-modal-escola {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal-escola {
+  background-color: #007bff;
+}
+
+#open-modal-escola:hover {
+  opacity: 1;
+}
+#modal-escola {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal-escola {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-escola {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#modal-escola.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#modal-escola.hide {
+  top: 0;
+}
+
+#close-modal-escola {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  background-color: #e22a2a;
+}
+
+#close-modal-escola:hover{
+  background-color: #bd2828;
+}

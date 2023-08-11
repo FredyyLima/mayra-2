@@ -406,6 +406,30 @@
   //   el.addEventListener("click", () => toggleModalcomunicacao());
   // });
 
+    /*Modal Comunicação Não-Violenta*/
+    const OpenEscola = document.querySelector("#open-modal-escola");
+    const CloseEscola = document.querySelector("#close-modal-escola");
+    const ModalEscola = document.querySelector("#modal-escola");
+    const formEscola = document.querySelector("#formescola");
+  
+    formEscola.addEventListener("submit", (event) => {
+      event.preventDefault();
+      ModalEscola.classList.add("hide");
+      fade.classList.add("hide")
+      toggleModalObrigado();
+    });
+  
+    const toggleModalEscola = () => {
+      ModalEscola.classList.toggle("hide");
+      fade.classList.toggle("hide");
+    };
+  
+    CloseEscola.addEventListener("click", toggleModalEscola)
+    OpenEscola.addEventListener("click", toggleModalEscola)
+    // [OpenEscola, CloseEscola, ModalEscola].forEach((el) => {
+    //   el.addEventListener("click", () => toggleModalEscola());
+    // });
+
   const formContato = document.querySelector("#formContato");
 
   formContato.addEventListener("submit", (event) => {
